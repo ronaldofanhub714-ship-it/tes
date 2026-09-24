@@ -1,11 +1,11 @@
 import CarCard from '../components/CarCard';
 import { useInventory } from '../hooks/useInventory';
-import { Spinner } from 'react-loading-icons';
+import { BallTriangle } from 'react-loading-icons';
 
 const Inventory = () => {
   const { cars, isLoading } = useInventory();
 
-  if (isLoading) return <Spinner className='mx-auto my-20' color='#1d4ed8' />;
+  if (isLoading) return <BallTriangle className='mx-auto my-20' stroke='#1d4ed8' />;
 
   return (
     <section>
