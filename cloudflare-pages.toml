@@ -1,29 +1,45 @@
-# cloudflare-pages.toml
-# ────────────────────────────────────────────────────────────────────────
-#  Cloudflare Pages build configuration.
-#  Place this file in the repository root so Pages can read it during build.
-#
-#  build.command     — Command executed to build the site.  The default is
-#                      "npm run build".  If you need to install npm
-#                      dependencies first, use "npm install && npm run build".
-#
-#  build.output_dir  — Directory that contains the files to be served.  For
-#                      a Vite project this is the default "dist".
-#
-#  preview.command   — Optional.  Command to run for local preview.  Not used by
-#                      CI, but handy if you ever want to run Pages builds
-#                      locally.
-#
-#  dev.command       — Optional.  Command for Cloudflare Workers‑preview.
-#
 [build]
-command = "npm run build"
-output_dir = "dist"
+  command = "npm run build"
+  output_dir = "dist"
 
-# If you wish to have Pages start the dev server for a local preview, add:
-# [preview]
-# command = "npm run dev"
+  package.json
 
-# For workers preview (rarely needed):
-# [dev]
-# command = "npx vite preview"
+  {
+    "name": "exotic-tesla-dealership",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "preview": "vite preview",
+      "lint": "eslint . --ext .ts,.tsx",
+      "format": "prettier --write .",
+      "impeccable": "impeccable"
+    },
+    "dependencies": {
+      "@tanstack/react-query": "^5.44.0",
+      "@vitejs/plugin-react": "^4.3.2",
+      "axios": "^1.6.7",
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1",
+      "react-router-dom": "^6.23.0",
+      "react-loading-icons": "^1.1.0"
+    },
+    "devDependencies": {
+      "@types/react": "^18.3.3",
+      "@types/react-dom": "^18.3.0",
+      "@types/react-router-dom": "^5.3.3",
+      "autoprefixer": "^10.4.20",
+      "eslint": "^8.57.0",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-plugin-react": "^7.34.2",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "postcss": "^8.4.38",
+      "prettier": "^3.3.2",
+      "tailwindcss": "^3.4.4",
+      "typescript": "^5.5.4",
+      "vite": "^5.3.5",
+      "vite-plugin-imagemin": "^0.6.1",
+      "vite-plugin-pwa": "^0.20.3"
+    }
+  }
